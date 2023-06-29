@@ -1,5 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  try {
+    let i = 0;
+    array.forEach(num =>{
+      const modArray = [...array]
+      modArray.splice(i, 1)
+      i = i + 1
+  
+      modArray.forEach( num2 =>{
+        if ((num + num2) === target) {
+          console.log(num + num2);
+            throw new error(); 
+        } 
+      })
+    })
+    return false;
+  }
+  catch {
+    return true;
+  }
 }
 
 /* 
@@ -8,6 +27,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  a method to take out only one number from the array, in order
+  with the number taken out, check the sum with every other number in the array
+  check if it matches target
 */
 
 /*
